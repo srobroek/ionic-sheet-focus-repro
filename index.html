@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ion-modal focus recursion</title>
+  </head>
+  <body>
+    <ion-app>
+      <ion-content class="ion-padding">
+        <ion-button id="both">Present both</ion-button>
+      </ion-content>
+
+      <ion-modal id="first" initial-breakpoint="0.5">
+        <ion-content class="ion-padding">
+          <ion-input label="Card number" id="card"></ion-input>
+        </ion-content>
+      </ion-modal>
+
+      <ion-modal id="second" initial-breakpoint="0.5">
+        <ion-content>
+          <ion-list>
+            <ion-item button>Visa</ion-item>
+            <ion-item button>Mastercard</ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-modal>
+    </ion-app>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
